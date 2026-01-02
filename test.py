@@ -1,5 +1,5 @@
 import time
 
 while True:
-    print("Sucess!! it's somewhat working!!", flush=True)
-    time.sleep(5)
+    print("Ii am feeling lucky", flush=True)
+    time.sleep(2)
