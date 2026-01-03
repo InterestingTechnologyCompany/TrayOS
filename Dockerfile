@@ -8,11 +8,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 # not sure if neccessary. TODO: check later. Not ready for opencv or other stuffs
 
-COPY LICENSE . 
-COPY src/ ./src/
+
 
 COPY src/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+
+COPY src/ ./src/
+COPY LICENSE . 
+
 COPY . .
 
 CMD ["python", "src/main.py"]
